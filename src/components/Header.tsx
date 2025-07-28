@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import vitaRailLogo from '@/assets/vita-rail-logo.jpg';
+import vitaRailLogo from '@/assets/vita-rail-logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,16 +33,16 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a href="mailto:vitarailservices25@gmail.com" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img 
               src={vitaRailLogo} 
               alt="Vita Rail Logo" 
-              className="w-10 h-10 object-contain rounded-lg"
+              className="w-12 h-12 object-contain"
             />
             <span className="text-2xl font-bold text-vita-blue-dark">
               Vita Rail
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
