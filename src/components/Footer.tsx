@@ -1,5 +1,5 @@
 import { Linkedin, Instagram, Mail, Phone, MapPin, Train } from 'lucide-react';
-import vitaRailLogo from '@/assets/vita-rail-logo.png';
+import vitaRailLogo from '@/assets/vita-rail-logo.jpg';
 
 const Footer = () => {
   const socialLinks = [
@@ -11,13 +11,13 @@ const Footer = () => {
     },
     {
       icon: Instagram,
-      href: 'https://www.instagram.com/vitarailservices?igsh=ZncyZmtidnBoc21r',
+      href: 'https://instagram.com',
       label: 'Instagram',
       color: 'hover:text-pink-600'
     },
     {
       icon: Mail,
-      href: 'mailto:vitarailservices25@gmail.com',
+      href: 'mailto:contact@vitarail.com',
       label: 'Email',
       color: 'hover:text-vita-blue'
     }
@@ -63,7 +63,7 @@ const Footer = () => {
               <img 
                 src={vitaRailLogo} 
                 alt="Vita Rail Logo" 
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12 object-contain rounded-lg bg-white/10 p-2"
               />
               <span className="text-3xl font-bold">Vita Rail</span>
             </div>
@@ -76,11 +76,11 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-vita-blue-light" />
-                <span className="text-blue-100">+91 7708576789</span>
+                <span className="text-blue-100">+91 1800-VITA-RAIL</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-vita-blue-light" />
-                <span className="text-blue-100">vitarailservices25@gmail.com</span>
+                <span className="text-blue-100">contact@vitarail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-vita-blue-light" />
