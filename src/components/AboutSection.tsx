@@ -26,7 +26,7 @@ const AboutSection = () => {
       }
     };
 
-    ['about', 'mission', 'scope'].forEach(createObserver);
+    ['about', 'mission', 'scope', 'contact'].forEach(createObserver);
 
     return () => {
       observers.forEach(observer => observer.disconnect());
@@ -39,6 +39,7 @@ const AboutSection = () => {
     <div className="py-20 vita-gradient">
       {/* About Us Section */}
       <section 
+        id="about"
         ref={el => sectionRefs.current['about'] = el}
         className="container mx-auto px-4 mb-32"
       >
@@ -80,6 +81,7 @@ const AboutSection = () => {
 
       {/* Mission Section */}
       <section 
+        id="mission"
         ref={el => sectionRefs.current['mission'] = el}
         className="container mx-auto px-4 mb-32"
       >
@@ -121,8 +123,9 @@ const AboutSection = () => {
 
       {/* Scope Section */}
       <section 
+        id="scope"
         ref={el => sectionRefs.current['scope'] = el}
-        className="container mx-auto px-4"
+        className="container mx-auto px-4 mb-32"
       >
         <div className="text-center mb-16">
           <div className={`flex items-center justify-center space-x-3 mb-6 transition-all duration-1000 ${isVisible('scope') ? 'animate-fade-in-up' : 'opacity-0'}`}>
@@ -163,6 +166,40 @@ const AboutSection = () => {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section 
+        id="contact"
+        ref={el => sectionRefs.current['contact'] = el}
+        className="container mx-auto px-4 py-20"
+      >
+        <div className="text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-vita-blue-dark mb-8">Contact Us</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
+            Get in touch with us for any queries or to start your culinary journey with Vita Rail
+          </p>
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+            <a 
+              href="mailto:vitarailservices25@gmail.com"
+              className="flex items-center space-x-3 bg-white/70 backdrop-blur-sm p-6 rounded-xl hover:shadow-hover transition-all"
+            >
+              <div className="bg-vita-blue/20 p-3 rounded-xl">
+                <Users className="w-6 h-6 text-vita-blue" />
+              </div>
+              <span className="font-medium text-lg">vitarailservices25@gmail.com</span>
+            </a>
+            <a 
+              href="tel:+917708576789"
+              className="flex items-center space-x-3 bg-white/70 backdrop-blur-sm p-6 rounded-xl hover:shadow-hover transition-all"
+            >
+              <div className="bg-vita-blue/20 p-3 rounded-xl">
+                <Target className="w-6 h-6 text-vita-blue" />
+              </div>
+              <span className="font-medium text-lg">+91 7708576789</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>

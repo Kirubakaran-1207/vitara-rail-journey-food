@@ -61,25 +61,6 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className={`transition-all duration-1000 delay-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-vita-blue hover:bg-vita-blue-dark text-white font-semibold px-8 py-4 rounded-xl shadow-soft hover:shadow-hover transition-smooth group"
-              >
-                Order Now
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-vita-blue text-vita-blue hover:bg-vita-blue hover:text-white font-semibold px-8 py-4 rounded-xl transition-smooth"
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
 
